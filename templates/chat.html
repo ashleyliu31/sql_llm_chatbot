@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}
+CHATBOT DEMO
+{% endblock %}
+
+{% block content %}
+<br>
+<br>
+<div class="form-group">
+    <h5>AI: Hello! I am the AI chatbot for Demo Laptop Shop. Please ask me questions about our laptops!
+    As a chatbot with memory, I can remember what you said. You can ask follow up questions about previous questions. 
+    If you click Restart Chat&Erase History, I will forget what you said and we will start over.
+    You can check the shop's catalogue and data here to verify the accuracy of my answers. Since this is a demo product, the prices
+    are not real.</h5>
+    <h5>Human:</h5>
+    <form action="{{ url_for('chat') }}" method="post">
+        <input class="form-control" type="text" id="human_input" name="human_input" placeholder="Type your question here (200 characters max)" required="required" maxlength="99999999999"/>
+        <br>
+        <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+    {% if response %}
+    <h5>AI: {{ response }}</h5>
+    {% endif %}
+        
+    
+    <br>
+    <br>
+    
+    
+    <h5>Chat History(Erased&Reset After 15 Min)</h5>
+    <p> {{ chat_history|safe }} </p>
+    <br>
+     <a href="{{ url_for('erase_chat_history') }}" class="btn btn-primary">Restart Chat&Erase History</a>
+     <a href="{{ url_for('index') }}" class="btn btn-primary">Return to Home Page</a>
+
+</div>
+
+
+{% endblock %}
+<script>
+    window.addEventListener('beforeunload', function () {
+        // Make an AJAX request to notify the server when the page is closed or navigated away
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '/clear_session', false); // Synchronous request
+        xhr.send();
+    });
+</script>

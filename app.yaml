@@ -1,0 +1,10 @@
+runtime: python310
+
+instance_class: F4
+
+env_variables:
+  username: "XXXXX"
+  password: "XXXXX"
+  database_name: "XXXXX"
+  google_api_key: "XXXXX"
+  INSTANCE_UNIX_SOCKET: "XXXXX"

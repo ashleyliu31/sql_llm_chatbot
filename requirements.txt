@@ -1,0 +1,9 @@
+Flask==2.3.3
+langchain==0.0.271
+google-generativeai==0.1.0
+google-ai-generativelanguage==0.2.0
+google-api-core==2.11.1
+google-auth==2.23.0
+googleapis-common-protos==1.60.0
+pg8000==1.30.2 
+gunicorn==21.2.0 
