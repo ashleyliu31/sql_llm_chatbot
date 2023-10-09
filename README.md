@@ -34,7 +34,11 @@ About memory limits:
 
 LLM-based chatbots' memories are limited by the context window of the base LLM. To free up room in memory and prevent memory from running out, memory should be emptied regularly. In this version, memory is stored in cookies, so clearing cookies frees up memory. Moreover, limiting the length of prompts prevents memory from running out too fast.  
 
-For more information about how the chatbot works: https://drive.google.com/file/d/1lzAWmRY9TtHhOnZEKIFWvVPaWzbgRKzy/view?usp=sharing
+For more information about how the chatbot works:
+
+https://www.youtube.com/watch?v=Lu_HPApainM
+
+https://drive.google.com/file/d/1lzAWmRY9TtHhOnZEKIFWvVPaWzbgRKzy/view?usp=sharing
 
 For inquiries, please reach me at liuyx@sas.upenn.edu
 
