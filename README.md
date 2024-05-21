@@ -5,9 +5,6 @@ Description:
 Patra is a chatbot that can perform natural language SQL retrievals backed by the LLM Google PaLM2. It has memory and can answer qusetions based on what is already said.
 It is built with Langchain and Flask. 
 
-Demo:
-Please see a demo deployed via Google Cloud App Engine here: https://flaskwebsite-399705.uc.r.appspot.com/chat
-
 This version of Patra simulates a chatbot for a laptop shop that can answer questions about laptop specs and prices.
 
 Sample questions to ask:
